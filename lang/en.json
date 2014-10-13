@@ -1,0 +1,194 @@
+{
+  "page": "main",
+  "title": "Amazon Web Services Introduction",
+  "caption": "The Cloud Awaits!",
+  "signup": "sign up!",
+  "tagline": "Implement a working Cloud App by end of day!",
+  "skillline": "One day hands-on course covering:",
+  "register": "Register",
+  "registertext": "Sessions are held in a professional setting in small groups. Lunch is provided.",
+  "courseinfotitle": "Need to understand the Cloud?",
+  "courseinfoparagraph": "Offering a wide range of solutions and integrated capabilities to create, deploy, and maintain scalable applications. This course is an introduction to the AWS ecosystem, describing each component and equipping the attendee with the ability to apply the knowledge toward building a Cloud application.",
+  "courseinfosub1": "Course Information",
+  "courseinfotext1": "The course format consists of a short lecture, followed by a practical lab task stitching together your own Cloud app!",
+  "courseinfolink1": "details",
+  "courseinfosub2": "Venue Information",
+  "courseinfotext2": "Sessions are held in a professional setting in small groups of 12 or less. Lunch is provided and you will select your food options at the time of registration.",
+  "courseinfolink2": "map",
+  "selectevent": "Select Course Date",
+  "coursedates": [
+    {
+      "id": "1",
+      "date": "Wed. July 9th",
+      "city": "Durham, NC",
+      "eventbrite": "http://www.eventbrite.com/e/amazon-web-services-introduction-course-tickets-11708790307?aff=portal"
+    },
+    {
+      "id": "2",
+      "date": "Mon. July 21st",
+      "city": "Durham, NC",
+      "eventbrite": "http://www.eventbrite.com/e/amazon-web-services-introduction-course-tickets-11708824409?aff=portal"
+    }
+  ],
+  "allcourses": "http://www.eventbrite.com/o/daniel-engel-6472616361?s=25344697",
+  "section3title": "One day hands-on small group course",
+  "section3subtitle": "Expect to learn how to:",
+  "learn": [
+    "Access the AWS Console",
+    "Create SNS feeds",
+    "Provision an EC2 instance",
+    "Make use of S3 and Glacier",
+    "Use SQS to orchestrate your app",
+    "Save valuable customer data to RDS",
+    "Load balance with ELB",
+    "Configure your domain on Route53",
+    "Contain your app on a VPC"
+  ],
+  "vimeoid": "95340177",
+  "section4image": "hand-cloud.jpg",
+  "section4title": "Understading the Cloud and AWS",
+  "section4text": "The Cloud can be intimitading with so many offerings and complexities. Amazon provides a great solution, but it can be daunting to approach and learn on your own. This course is designed to equip you with the basics and fundamentals of AWS in just one day. It provides a hands-on experience with meaningful labs and personal assistance. The small group setting is the perfect environment in which to focus and learn, while expanding your network and confidence. Join us and tame the Cloud once and for all!",
+  "milestone1title": "app",
+  "milestone1value": "1",
+  "milestone2title": "hours",
+  "milestone2value": "8",
+  "milestone3title": "topics",
+  "milestone3value": "12",
+  "milestone4title": "students",
+  "milestone4value": "10",
+  "skills": [
+    {
+      "name": "Console",
+      "icon": "aws-console.svg",
+      "desc": "Access and manage Amazon Web Services through a simple and intuitive web-based user interface. The AWS Console is your portal to all Web Services provided by Amazon."
+    },
+    {
+      "name": "IAM",
+      "icon": "aws-iam.svg",
+      "desc": "AWS Identity and Access Management (IAM) enables you to securely control access to AWS services and resources for your users. Using IAM, you can create and manage AWS users and groups and use permissions to manage their access to AWS resources."
+    },
+    {
+      "name": "SNS",
+      "icon": "aws-sns.svg",
+      "desc": "Amazon Simple Notification Service (Amazon SNS) is a fast, flexible, fully managed push messaging service. Amazon SNS makes it simple and cost-effective to push to mobile devices and internet- connected smart devices, as well as pushing to other distributed services."
+    },
+    {
+      "name": "Glacier",
+      "icon": "aws-glacier.svg",
+      "desc": "Amazon Glacier is an extremely low-cost storage service that provides secure and durable storage for data archiving and backup. In order to keep costs low, Amazon Glacier is optimized for data that is infrequently accessed and for which retrieval times of several hours are suitable."
+    },
+    {
+      "name": "S3",
+      "icon": "aws-s3.svg",
+      "desc": "Amazon S3 provides a simple web-services interface that can be used to store and retrieve any amount of data, at any time, from anywhere on the web. It gives any developer access to the same highly scalable, reliable, secure, fast, inexpensive infrastructure that Amazon uses to run its own global network of web sites."
+    },
+    {
+      "name": "VPC",
+      "icon": "aws-vpc.svg",
+      "desc": "Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the Amazon Web Services (AWS) Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment."
+    },
+    {
+      "name": "EC2",
+      "icon": "aws-ec2.svg",
+      "desc": "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the Cloud. It is designed to make web-scale computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction."
+    },
+    {
+      "name": "EIP",
+      "icon": "aws-eip.svg",
+      "desc": "An Elastic IP address (EIP) is a static IP address designed for dynamic Cloud computing. With an EIP, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account. Your EIP is associated with your AWS account, not a particular instance."
+    },
+    {
+      "name": "ELB",
+      "icon": "aws-elb.svg",
+      "desc": "Elastic Load Balancing automatically distributes and balances the incoming application traffic among all the instances you are running, improving the availability and scalability of your application. The service also makes it easy to add new instances or remove underused instances to easily scale."
+    },
+    {
+      "name": "RDS",
+      "icon": "aws-rds.svg",
+      "desc": "Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the Cloud. It provides cost-efficient, resizable capacity for an industry-standard relational database and manages common database administration tasks."
+    },
+    {
+      "name": "CloudWatch",
+      "icon": "aws-watch.svg",
+      "desc": "Amazon CloudWatch provides monitoring for AWS Cloud resources and the applications customers run on AWS. Developers and system administrators can use it to collect and track metrics, gain insight, and react immediately to keep their applications and businesses running smoothly."
+    },
+    {
+      "name": "Route53",
+      "icon": "aws-route53.svg",
+      "desc": "Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. It is designed to give users an extremely reliable and cost effective way to route end users to Internet applications by translating names into the numeric IP addresses that computers use to connect to each other."
+    }
+  ],
+  "venue": {
+    "name": "Bull City Coworking",
+    "address": "112 S Duke St, Durham, NC 27701",
+    "city": "Durham, NC USA",
+    "murl": "https://goo.gl/maps/Kgk0x",
+    "map": "https://mapsengine.google.com/map/embed?mid=z3B8aWHHtqnA.kaKI6MgkcPY8",
+    "mapimg": "bullcity-map.png"
+  },
+  "intro_text": "Amazon Web Services is the de-facto Cloud Services provider, offering a wide range of solutions and integrated capabilities to create, deploy, and maintain scalable applications. This course is an introduction to the AWS ecosystem, describing each component and equipping the attendee with the ability to apply the knowledge towards building a Cloud application.",
+  "prereq_title": "Course Pre-requisites",
+  "prereq_text": "Each attendee must have a basic understanding of computer systems, networking, and the Internet in general. In addition, each attendee must have an existing consumer account on amazon.com, and bring a valid Credit Card to be able to create an AWS account. Amazon provides an entire year of a free tier service that will cover all materials taught in the class. IMPORTANT: Bring your own laptop.",
+  "morninglabel": "morning",
+  "afternoonlabel": "afternoon",
+  "morning": [
+    {
+      "name": "Part One: Introduction to AWS",
+      "topics": [
+        "Create an AWS account",
+        "Navigate the AWS Console",
+        "Recognize AWS Global Infrastructure"
+      ]
+    },
+    {
+      "name": "Part Two: AWS Basics",
+      "topics": [
+        "Describe Amazon Identity and Access Management (IAM)",
+        "Describe SNS",
+        "Create an SNS Topic and subscribe to it"
+      ]
+    },
+    {
+      "name": "Part Three: AWS Storage",
+      "topics": [
+        "Describe CloundFront",
+        "Describe Glacier",
+        "Describe S3",
+        "Create an Amazon S3 bucket and manage associated objects"
+      ]
+    }
+  ],
+  "lunchtext": "Delicious options from local catering provided. Select at signup.",
+  "afternoon": [
+    {
+      "name": "Part Four: Compute Services",
+      "topics": [
+        "Identify the different AWS compute and networking options",
+        "Describe an Amazon Virtual Private Cloud (VPC)",
+        "Describe EC2 instances",
+        "Create an Amazon EC2 instance",
+        "Describe EBS/IOPS",
+        "Use EBS with EC2",
+        "Describe Route53",
+        "Use Route53 with EC2"
+      ]
+    },
+    {
+      "name": "Part Five: Managed Services",
+      "topics": [
+        "Describe Amazon DynamoDB",
+        "Understand key aspects of Amazon RDS",
+        "Launch an Amazon RDS instance"
+      ]
+    },
+    {
+      "name": "Part Six: Deployment and Management",
+      "topics": [
+        "Describe CloudFormation",
+        "Describe Amazon CloudWatch metrics and alarms",
+        "Describe EBS/OpsWorks",
+        "Deploy a complete system with EBS"
+      ]
+    }
+  ]
+}

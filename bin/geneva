@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+APP="bin/www"
+
+LOG="/tmp/geneva-forever.log"
+ERR="/tmp/geneva-error.log"
+OUT="/tmp/geneva-out.log"
+PID="/tmp/geneva-app.pid"
+
+function error {
+  echo "*** Error: $*"
+  exit 1
+}
+
+function log {
+  echo "> $*"
+}
+
+[ "$1" == "pro" ]  && BUILD="PROD"
+[ "$1" == "prod" ] && BUILD="PROD"
+
+[ ! -f $"APP" ] || error "Can't find $APP"
+
+log "Refreshing modules"
+npm install || error "Can't install modules"
+
+log "Setting up environment"
+if [ "$BUILD" == "PROD" ]; then
+   export NODE_ENV="production"
+else
+   export DEBUG="express:*" 
+   export NODE_ENV="development"
+   bin/mkcdn || error "Can't make CDN content"
+fi
+
+log "Stopping App"
+node_modules/forever/bin/forever stopall 
+
+log "Starting App"
+node_modules/forever/bin/forever start -a --minUptime 1500 --spinSleepTime 2000 --pidFile $PID -l $LOG -e $ERR -o $OUT $APP || error "Can't start app"
+
+log "Listing App"
+node_modules/forever/bin/forever list

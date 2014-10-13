@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# CDN Location
+DST="public/cdn"
+
+# Load up the CDN location
+bin/mkcdn
+
+echo "*** Uploading to S3"
+if [ `command -v s3cmd` ]; then
+   /usr/bin/s3cmd --delete-removed -P sync ${DST}/* s3://aws-intro/cdn/
+fi

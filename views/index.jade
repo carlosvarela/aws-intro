@@ -1,0 +1,175 @@
+extends layout
+
+block content
+
+  #top(data-stellar-background-ratio="0.5", style="background: url(#{cdn}/hero.jpg) no-repeat fixed; background-size: 100%")
+    .container
+      .row
+        .col-lg-12.caption
+          h1
+            | #{caption}
+          p
+            | #{tagline}
+
+  section#content1
+    .container
+      .row
+        .col-lg-8.col-md-12.wow.fadeInLeft
+          h3.uppercase
+            | #{courseinfotitle}
+          p
+            | #{courseinfoparagraph}
+          .row
+            .col-lg-6
+              h3
+                i.fa.fa-bars
+                | &nbsp; #{courseinfosub1}
+              p
+                | #{courseinfotext1}
+              button.button.big.button-dark(data-target="#modal_course", data-toggle="modal")
+                | #{courseinfolink1}
+            .col-lg-6
+              h3
+                i.fa.fa-bars
+                | &nbsp; #{courseinfosub2}
+              p
+                | #{courseinfotext2}
+              button.button.big.button-dark(data-target="#modal_venue", data-toggle="modal")
+                | #{courseinfolink2}
+        .col-lg-4.col-md-4
+         .form1
+           h2.orange
+             i.fa.fa-pencil-square-o
+             | &nbsp; #{register}
+           p.text
+             | #{registertext}
+           p.text
+               i.fa.fa-graduation-cap
+               a.button.big.button-dark(href='/events/1', title='Amazon Web Services Introduction Course July 9, 2014')
+                | Wednesday, July 9, 2014 from 9:00 AM to 5:00 PM (EDT) Durham, NC
+
+            p.text
+               i.fa.fa-graduation-cap
+               a.button.big.button-dark(href='/events/2', title='Amazon Web Services Introduction Course July 21, 2014')
+                | Monday, July 21, 2014 from 9:00 AM to 5:00 PM (EDT) Durham, NC
+
+  section#content4
+    .container
+      .row.wow.bounceInRight
+        .col-lg-3.col-md-3
+          img(src="#{cdn}/#{section4image}", alt="", width="250")
+        .col-lg-9.col-md-9
+          h3
+            | #{section4title}
+          p
+            | #{section4text}
+
+  section#content3
+    .container
+      .row
+        .col-lg-12
+          h3.text-center.uppercase.wow.fadeInDown
+            | #{section3title}
+          h2.text-center.wow.fadeInUp
+            | #{section3subtitle}
+      .row
+        .col-lg-7.col-md-7.wow.fadeInLeft
+          #video
+            iframe(src="http://player.vimeo.com/video/#{vimeoid}?title=0&amp;byline=0&amp;portrait=0&amp;color=4584be" width="600", height="338", style="border:0")
+        .col-lg-5.col-md-5
+          ul.list-unstyled.lead
+            - var delay = 0
+            - each subject in learn
+              - delay = delay + 1
+              li.wow.fadeInRight(data-wow-delay="0.#{delay}s")
+                i.fa.fa-check-square-o
+                | #{subject}
+
+  section#content2
+    .container
+      .row
+      - var elementsInRow = 4
+      - each _, x in skills
+        - if (( x % elementsInRow == 0 ))
+          .row
+            -each skill, y in skills.slice(x, x+elementsInRow)
+              .col-lg-3.col-md-3.text-center.wow.fadeInDown(data-wow-delay="0.2s")
+                h2.compact
+                  img.icon-skill(src="#{cdn}/#{skill.icon}", alt="#{skill.name}")
+                  = skill.name
+                p
+                  =skill.desc
+
+  #milestone(data-stellar-background-ratio="0.5", style="background: url(#{cdn}/map.png) no-repeat")
+    .container
+      .row.text-center
+        .col-lg-2.col-md-2.col-xs-12.col-lg-offset-2
+          p.timer(data-to="#{milestone1value}", data-speed="5000")
+          p
+            | #{milestone1title}
+        .col-lg-2.col-md-2.col-xs-12
+          p.timer(data-to="#{milestone2value}", data-speed="5000")
+          p
+            | #{milestone2title}
+        .col-lg-2.col-md-2.col-xs-12
+          p.timer(data-to="#{milestone3value}", data-speed="5000")
+          p
+            | #{milestone3title}
+        .col-lg-2.col-md-2.col-xs-12
+          p.timer(data-to="#{milestone4value}", data-speed="5000")
+          p
+            | #{milestone4title}
+
+  // Course Modal
+  .modal.fade(id="modal_course" tabindex="-1", role="dialog", aria-hidden="true")
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+          h4
+            i.fa.fa-book &nbsp;
+            | #{courseinfosub1}
+        .modal-body
+          h2.text-center.uppercase
+            | #{morninglabel}
+          - each part in morning
+            h4
+              i.fa.fa-chevron-circle-right &nbsp;
+              = part.name
+            ul
+              - each topic in part.topics
+                li= topic
+          h3 Lunch Provided
+          p
+            | #{lunchtext}
+          hr
+          h2.text-center.uppercase
+            | #{afternoonlabel}
+          - each part in afternoon
+            h4
+              i.fa.fa-chevron-circle-right &nbsp;
+              = part.name
+            ul
+              - each topic in part.topics
+                li= topic
+        .modal-footer
+          button.btn.btn-primary(type="button", data-dismiss="modal") Close
+
+  // Venue Modal
+  .modal.fade(id="modal_venue" tabindex="-1", role="dialog", aria-hidden="true")
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+          h4
+            i.fa.fa-building-o &nbsp;
+            = venue.name
+        .modal-body
+          p
+            a(href="#{venue.murl}", target="_blank")
+              | Address:
+              = venue.address
+          a(href="#{venue.murl}", target="_blank")
+            img(src="#{cdn}/#{venue.mapimg}", alt="", width="550", height="550", style="border:0")
+        .modal-footer
+          button.btn.btn-primary(type="button", data-dismiss="modal") Close

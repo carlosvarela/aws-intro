@@ -1,0 +1,10 @@
+html(xmlns='http://www.w3.org/1999/xhtml', lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+    title= title
+  body
+    .reglogo
+      a(href='/', style='background:url(#{cdn}/logo-register.png) no-repeat;')= title
+    iframe(src='#{redirect}', frameborder='0', height='1000', width='100%', vspace='0', hspace='0', marginheight='5', marginwidth='5', scrolling='auto', allowtransparency='true')
+  script(src='/javascripts/analytics.js')

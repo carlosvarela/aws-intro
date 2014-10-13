@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+# Insert library name in desired order
+JS="
+jquery-1.11.0.min.js
+bootstrap.min.js
+wow.min.js  
+jquery.stellar.min.js
+jquery.fitvids.js
+jquery.countTo.js
+retina-1.1.0.min.js
+social-likes.min.js
+grunticon.js
+crazyegg.js
+"
+
+ST="
+bootstrap.css
+animate.min.css
+social-likes_classic.css
+"
+
+# Javascript Dir
+JSC="public/javascripts"
+
+# Stylesheet Dir
+STL="public/stylesheets"
+
+# Images Dir
+IMG="public/images"
+
+# Resulting file
+DST="public/cdn"
+
+echo "*** Cleaning up CDN"
+[ -d $DST ] || mkdir $DST
+rm -fv $DST/* | wc -l
+
+echo "*** Updating Javacript"
+for entry in $JS
+do
+  cp -v ${JSC}/${entry} $DST/
+done
+
+echo "*** Updating Stylesheet"
+for entry in $ST
+do
+  cp -v ${STL}/${entry} $DST/
+done
+
+echo "*** Updating Images"
+for entry in $IMG/*
+do
+  cp -v ${entry} $DST/
+done
+
+exit 0

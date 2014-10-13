@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#
+# Cron keep alive
+# * * * * * /home/express/geneva/bin/alive > /tmp/geneva-cron.log 2>&1
+
+PROD="pro"
+PID="/tmp/geneva-app.pid"
+
+RESTART="0"
+
+if [ -f $PID ]; then
+	if [ ! `pgrep -F $PID` ]; then
+	   echo "*** Process not found"
+	   RESTART="1"
+	fi
+else
+	echo "*** Pid file not found $PID"
+        echo "*** Killing all node apps"
+	killall node 2> /dev/null
+	RESTART="1"
+fi
+
+if [ "$RESTART" == "1" ];then
+	echo "*** Restarting..."
+	(cd ~/geneva && bin/geneva $PROD)
+fi

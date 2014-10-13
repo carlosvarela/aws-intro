@@ -1,0 +1,1 @@
+killall node ; bin/www >> /tmp/egypt.log 2>&1 &
